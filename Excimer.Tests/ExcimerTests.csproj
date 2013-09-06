@@ -62,6 +62,10 @@
       <Project>{92E5EDBB-EAF5-4395-A696-B34F7283112F}</Project>
       <Name>Excimer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TestHelpers\TestHelpers.csproj">
+      <Project>{e416c709-9348-40db-8650-1ec0df310515}</Project>
+      <Name>TestHelpers</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -77,7 +77,14 @@ namespace Excimer
 
             while (_listener.IsListening)
             {
-                ThreadPool.QueueUserWorkItem(ProcessRequest, _listener.GetContext());
+				try
+				{
+					ThreadPool.QueueUserWorkItem(ProcessRequest, _listener.GetContext());
+				}
+				catch(Exception e) 
+				{
+					Env.Log ("Exception caught in webserver service thread: " + e.Message);
+				}
 			}
         }
 

@@ -63,7 +63,7 @@
       <Name>Excimer</Name>
     </ProjectReference>
     <ProjectReference Include="..\TestHelpers\TestHelpers.csproj">
-      <Project>{e416c709-9348-40db-8650-1ec0df310515}</Project>
+      <Project>{E416C709-9348-40DB-8650-1EC0DF310515}</Project>
       <Name>TestHelpers</Name>
     </ProjectReference>
   </ItemGroup>

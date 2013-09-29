@@ -58,7 +58,8 @@ namespace Excimer
             else if (parsedRequest is FileRequest)
                 return HandleFileRequest((FileRequest)parsedRequest, url);
 
-            else throw new Exception("Unknown request type");
+            else 
+                throw new Exception("Unknown request type");
         }
 
         private Response HandleApiRequest(ApiRequest apiRequest, string requestData)
@@ -117,6 +118,9 @@ namespace Excimer
 
                 var assemblyWithResources = _registeredAssemblies[fileRequest.AssemblyFilename];
                 var stream = assemblyWithResources.GetManifestResourceStream(fileRequest.ResourceName);
+
+                if (stream == null)
+                    throw new Exception();
 
                 return new Response(new TypedStream(stream, contentType));
             }
